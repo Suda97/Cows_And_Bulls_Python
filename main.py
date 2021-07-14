@@ -37,6 +37,13 @@ def checkbull(gennumber, usernumber):
 
 y = genNum()
 print(y)
-x = input("Give me 4 digit number: ")
-print(checkcow(y, x))
-print(checkbull(y, x))
+print("Welcome to cows and bulls game!")
+
+while True:
+    x = input("Give me 4 digit number: ")
+    cow = checkcow(y, x)
+    bull = checkbull(y, x)
+    print("Cows: " + str(cow) + " Bulls: " + str(bull))
+    if cow == 4:
+        print("You WIN!")
+        break
